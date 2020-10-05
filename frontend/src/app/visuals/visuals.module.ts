@@ -1,15 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SpendingByCategoryComponent } from './spending-by-category/spending-by-category.component';
-import { WeeklySpendingComponent } from './weekly-spending/weekly-spending.component';
-import { MonthlySpendingComponent } from './monthly-spending/monthly-spending.component';
+import { VisualsComponent } from './visuals/visuals.component';
+import { Routes, RouterModule } from "@angular/router";
 
-
+const appRoutes: Routes = [
+  {
+    path: '',
+    component: VisualsComponent,
+  }
+]
 
 @NgModule({
-  declarations: [SpendingByCategoryComponent, WeeklySpendingComponent, MonthlySpendingComponent],
+  declarations: [VisualsComponent],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    RouterModule.forChild(appRoutes)
+  ],
+  exports: [VisualsComponent]
 })
 export class VisualsModule { }

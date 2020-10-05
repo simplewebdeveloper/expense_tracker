@@ -3,15 +3,21 @@ from django.urls import path
 from .views import *
 
 urlpatterns = [
-    # Managing Expenses path
-    path('manage/create', CreateExpenseView.as_view()),
-    path('manage/view/single', ViewExpenseSingleView.as_view()),
-    path('manage/edit/single', EditExpenseSingleView.as_view()),
-    path('manage/view/all', ViewExpensesAllView.as_view()),
-    path('manage/delete/single', DeleteExpenseSingleView.as_view()),
+    # Expenses path
+    path('expenses/save/single', SaveExpense.as_view()),
+    path('expenses/get/single', GetExpense.as_view()),
+    path('expenses/view/all', ViewExpenses.as_view()),
+    path('expenses/delete/single', DeleteExpense.as_view()),
 
-    # Generating Visuals path
-    path('visuals/spending-by-category', SpendingByCategoryView.as_view()),
-    path('visuals/weekly-spending', WeeklySpendingView.as_view()),
-    path('visuals/monthly-spending', MonthlySpendingView.as_view()),
+    # Categories path
+    path('categories/save/single', SaveCategory.as_view()),
+    path('categories/view/all', ViewCategories.as_view()),
+    path('categories/delete/single', DeleteCategory.as_view()),
+
+    # Visuals path
+    path('visuals/get_monthly_spending_visuals/all', getMonthlySpendingVisuals.as_view()),
+    path('visuals/get_weekly_spending_visuals/all', getWeeklySpendingVisuals.as_view()),
+    path('visuals/get_spending_by_category_visuals/all', getSpendingByCategoryVisuals.as_view()),
 ]
+
+

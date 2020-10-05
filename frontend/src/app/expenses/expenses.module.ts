@@ -1,17 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CreateExpenseComponent } from './create-expense/create-expense.component';
-import { ViewUpdateExpenseComponent } from './view-update-expense/view-update-expense.component';
-import { ViewExpensesComponent } from './view-expenses/view-expenses.component';
-import { DeleteExpenseComponent } from './delete-expense/delete-expense.component';
-import { WeeklySpendingComponent } from './weekly-spending/weekly-spending.component';
+import { ExpensesComponent } from './expenses/expenses.component';
+import { Routes, RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
-
+const appRoutes: Routes = [
+  {
+    path: 'expenses',
+    component: ExpensesComponent,
+  }
+]
 
 @NgModule({
-  declarations: [CreateExpenseComponent, ViewUpdateExpenseComponent, ViewExpensesComponent, DeleteExpenseComponent, WeeklySpendingComponent],
+  declarations: [ExpensesComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule,
+    RouterModule.forChild(appRoutes)
+  ],
+  exports: [
+    ExpensesComponent,
   ]
 })
 export class ExpensesModule { }
