@@ -2,6 +2,7 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+// environment.tx
 export const environment = {
   production: false,
   restApi: {uri: 'http://127.0.0.1:8000'}

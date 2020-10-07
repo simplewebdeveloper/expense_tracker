@@ -7,6 +7,7 @@ import { ExpensesService } from '../expenses.service'
 import { CategoriesService } from "../../categories/categories.service";
 import { HttpErrorResponse } from '@angular/common/http'
 
+
 @Component({
   selector: 'app-expenses',
   templateUrl: './expenses.component.html',

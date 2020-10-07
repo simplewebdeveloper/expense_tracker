@@ -20,6 +20,10 @@ const appRoutes: Routes = [
     loadChildren: '../app/visuals/visuals.module#VisualsModule',
   },
   {
+    path: 'visuals',
+    loadChildren: '../app/visuals/visuals.module#VisualsModule',
+  },
+  {
     path: 'expenses',
     loadChildren: '../app/expenses/expenses.module#ExpensesModule',
   },
@@ -34,6 +38,7 @@ const appRoutes: Routes = [
     AppComponent
   ],
   imports: [
+    
     SharedModule,
     VisualsModule,
     ExpensesModule,
@@ -41,10 +46,10 @@ const appRoutes: Routes = [
     BrowserModule,
     ReactiveFormsModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
   ],
   exports: [
-    AppComponent
+    AppComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

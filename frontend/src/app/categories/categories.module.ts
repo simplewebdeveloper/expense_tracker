@@ -14,9 +14,9 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [CategoriesComponent],
   imports: [
+    RouterModule.forChild(appRoutes),
     CommonModule,
     ReactiveFormsModule,
-    RouterModule.forChild(appRoutes),
   ],
   exports: [
     CategoriesComponent,

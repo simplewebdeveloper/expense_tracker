@@ -1,3 +1,4 @@
+// expenses.module.ts
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ExpensesComponent } from './expenses/expenses.component';
@@ -14,9 +15,9 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [ExpensesComponent],
   imports: [
+    RouterModule.forChild(appRoutes),
     CommonModule,
     ReactiveFormsModule,
-    RouterModule.forChild(appRoutes)
   ],
   exports: [
     ExpensesComponent,
