@@ -15,7 +15,7 @@
 6. run the Django development server <br />
   `python manage.py runserver`
   
-### Fronend Setup
+### Frontend Setup
 7. cd into the frontend folder
 8. make sure that npm, angular and angular CLI is installed
 9. run npm install
