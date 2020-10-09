@@ -55,7 +55,7 @@ class GetExpense(APIView):
             print(user_message)
             return Response(user_message, status=status.HTTP_400_BAD_REQUEST)
 
-# View all expenses
+# View expenses
 class ViewExpenses(APIView):
     def get(self, request, *args, **kwargs):
         try:
@@ -68,7 +68,7 @@ class ViewExpenses(APIView):
             user_message = 'Error getting expenses'
             return Response(user_message, status=status.HTTP_400_BAD_REQUEST)
 
-# Delete a single expenses
+# Delete a single expense
 class DeleteExpense(APIView):
     def post(self, request, *args, **kwargs):
         try:
@@ -85,7 +85,7 @@ class DeleteExpense(APIView):
             return Response(user_message, status=status.HTTP_400_BAD_REQUEST)
 
 
-# Create a category
+# Save a category
 class SaveCategory(APIView):
     def post(self, request, *args, **kwargs):
         print(request.data)
@@ -134,8 +134,7 @@ class DeleteCategory(APIView):
 
 ## Visuals ##
 
-# Spending by category
-
+# Monthly spending
 class getMonthlySpendingVisuals(APIView):
     def get(self, request, *args, **kwargs):
 
